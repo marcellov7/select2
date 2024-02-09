@@ -239,7 +239,7 @@ test('clicking clear will trigger the clear event', function (assert) {
     );
 
     assert.ok(
-      $.isArray(ev.data),
+      Array.isArray(ev.data),
       'The data should be an array'
     );
 

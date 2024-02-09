@@ -91,9 +91,9 @@ test('will not trigger if no results here highlighted', function (assert) {
     1,
     'There should be one result in the dropdown'
   );
-
+  
   assert.equal(
-    $.trim($dropdown.find('li').text()),
+    $dropdown.find('li').text().trim(),
     'Test',
     'The result should be the same as the one we appended'
   );

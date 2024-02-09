@@ -421,7 +421,7 @@ define([
   };
 
   Defaults.prototype.set = function (key, value) {
-    var camelKey = $.camelCase(key);
+    var camelKey = (str => str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase()))(key);
 
     var data = {};
     data[camelKey] = value;
